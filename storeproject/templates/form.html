@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body style="background-color:#F9EBEA;">
+<h2 style="color:black;">Form</h2>
+<form action="form" method="post">
+    {%csrf_token %}
+    <label>Name:</label>
+    <input type="text" name="name"><br>
+    <label>DOB:</label>
+    <input type="date" name="dob"><br>
+    <label>Gender:</label>
+    <select name="gender">
+     <option value="">Please select one…</option>
+     <option value="female">Female</option>
+     <option value="male">Male</option>
+     <option value="other">Other</option>
+     <option value="Prefer not to answer">Perfer not to Answer</option>
+    </select><br>
+    <label>PhoneNumber:</label>
+    <input type="number" name="phonenumber"><br>
+    <label>Email:</label>
+    <input type="email" name="email"><br>
+    <label>Address:</label>
+    <input type="text" name="address"><br>
+    Department: <select name="department" id="department">
+    <option value="" selected="selected">Select department</option>
+    <option value="computer science">Computer Science</option>-->
+    <option value="commerce">Commerce</option>
+    <option value="psychology">Psychology</option>
+    <option value="science">Science</option>
+    <option value="philosophy">Philosophy</option>
+    </select><br><br>
+    Course: <select name="course" id="course">
+    <option value="" selected="selected">Please select department</option>
+    <option value="computer science" selected="selected">machine learning</option>
+    <option value="computer science" selected="selected">Data science</option>
+    <option value="computer science" selected="selected">software development</option>
+    <option value="commerce" selected="selected">bachelor of commerce</option>
+    <option value="commerce" selected="selected">Chartered accountant</option>
+    <option value="commerce" selected="selected">Bachelor in economics</option>
+    <option value="science" selected="selected">Bachelor in economics</option>
+    <option value="science" selected="selected">Bachelor in economics</option>
+    <option value="science" selected="selected">Bachelor in economics</option>
+    <option value="philosophy" selected="selected">Bachelor in economics</option>
+    <option value="philosophy" selected="selected">Bachelor in economics</option>
+    <option value="philosophy" selected="selected">Bachelor in economics</option>
+    <option value="psychology" selected="selected">Bachelor in economics</option>
+    <option value="psychology" selected="selected">Bachelor in economics</option>
+    <option value="psycology" selected="selected">Bachelor in economics</option>
+
+  </select>
+  <br><br>
+<!--  <input type="submit" value="Submit">  -->
+<!--    <label>Department:</label>-->
+<!--    <select name="department">-->
+<!--     <option value="">Please select one…</option>-->
+<!--     <option value="computer science">Computer Science</option>-->
+<!--     <option value="commerce">Commerce</option>-->
+<!--     <option value="psychology">Psychology</option>-->
+<!--     <option value="science">Science</option>-->
+<!--     <option value="philosophy">Philosophy</option>-->
+<!--    </select><br>-->
+    <label>Purpose:</label>
+    <select name="purpose">
+     <option value="">Please select one…</option>
+     <option value="for enquiry">For Enquiry</option>
+     <option value="place order">Place order</option>
+     <option value="return">Return</option>
+    </select><br>
+    <legend>Materials Provided?</legend>
+        <input type="checkbox" name="pen" value="pen">Pen<br>
+        <input type="checkbox" name="pencil" value="pencil">Pencil<br>
+        <input type="checkbox" name="exam paper" value="exampaper">Exam Paper<br>
+        <input type="checkbox" name="book" value="book">Book<br>
+        <input type="checkbox" name="laptop" value="laptop">Laptop<br>
+        <input type="submit">
+
+
+</form>
+
+
+{% for msg in messages %}
+<h3>{{msg}}</h3>
+{% endfor %}
+<a href="/">Home</a>
+</body>
+</html>
